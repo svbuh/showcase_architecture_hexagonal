@@ -1,0 +1,24 @@
+### get all users
+GET http://localhost:8080/users
+Authorization: Basic hagrid hagrid
+
+### get certificate
+GET http://localhost:8080/certificates
+Authorization: Basic harry harry
+
+### post certificate
+POST http://localhost:8080/users/harry/certificate
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Authorization: Basic hagrid hagrid
+
+--WebAppBoundary
+Content-Disposition: form-data; name="element-name"
+Content-Type: text/plain
+
+Name
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="cert.txt"
+Content-Type: application/json
+
+< ../test-files/1.txt
+--WebAppBoundary--

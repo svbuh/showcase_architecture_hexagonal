@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:localdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+logging:
+  level:
+    org.springframework.security: info
+
+cert:
+  users:
+    - username: "harry"
+      password: "harry"
+      isPrivileged: false
+    - username: "ron"
+      password: "ron"
+      isPrivileged: false
+    - username: "hermine"
+      password: "hermine"
+      isPrivileged: false
+    - username: "draco"
+      password: "draco"
+      isPrivileged: false
+    - username: "hagrid"
+      password: "hagrid"
+      isPrivileged: true
+    - username: "albus"
+      password: "albus"
+      isPrivileged: true
+    - username: "severus"
+      password: "severus"
+      isPrivileged: true
